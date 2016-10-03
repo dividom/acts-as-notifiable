@@ -5,7 +5,6 @@ module ActsAsNotifiable
     belongs_to :notified, polymorphic: true
     belongs_to :notifiable, polymorphic: true
 
-    scope :notified_to, ->(receiver) { where(notified: receiver) }
     scope :global, -> { where(is_global: true) }
     scope :unread, -> { where(is_read: true) }
 

@@ -1,10 +1,27 @@
 module ActsAsNotifiable
   module Notifiable
 
-    def acts_as_notifiable
+    ##
+    # Make a model notifiable. This allows an instance of a model to claim notifications
+    # are related to it.
+    #
+    # Example :
+    #   class Message
+    #     acts_as_notifiable
+    #   end
+    def acts_as_notifiable(opts={})
       class_eval do
-        has_many :notifyings, as: :notifiable, dependant: :destroy, class_name: '::ActsAsNotifiable::Notifying'
-        has_many :notifications, through: :notifyings, source: :notification, class_name: '::ActsAsNotifiable::Notification'
+        related_notifyings_scope = options.delete(:scope)
+
+        has_many :related_notifyings, related_notifyings_scope,
+                  as: :notifiable,
+                  dependant: :destroy,
+                  class_name: '::ActsAsNotifiable::Notifying'
+
+        has_many :related_notifications,
+                  through: :notifyings,
+                  source: :notification,
+                  class_name: '::ActsAsNotifiable::Notification'
       end
     end
   end
