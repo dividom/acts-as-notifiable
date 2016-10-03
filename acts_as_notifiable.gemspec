@@ -14,11 +14,13 @@ Gem::Specification.new do |spec|
   spec.description = "Make any model be notifiable or act as a notifier."
   spec.license     = "MIT"
 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  spec.test_files = Dir["test/**/*"]
+  spec.files         = `git ls-files`.split($/)
+  spec.test_files    = spec.files.grep(%r{^spec/})
+  spec.require_paths = ['lib']
 
   spec.required_ruby_version = ">= 2.2"
 
+  spec.add_development_dependency "rails", "4.2.5"
   spec.add_development_dependency "pg"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rspec", "~> 3"
