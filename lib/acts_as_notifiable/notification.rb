@@ -45,4 +45,12 @@ module ActsAsNotifiable
       select("notifications.*")
     end
   end
+
+  ### INSTANCE METHODS:
+
+  def to_s
+    body
+  end
+
+  
 end
