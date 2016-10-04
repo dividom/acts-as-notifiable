@@ -20,6 +20,49 @@ module ActsAsNotifiable
                     class_name: '::ActsAsNotifiable::Notification'
                   )
       end
+
+      include ActsAsNotifiable::Notifiable::InstanceMethods
+    end
+
+    module InstanceMethods
+
+      ##
+      # Notify one or several @notifieds about self, coming from @notifier.
+      # Doesn't save the notifications.
+      # Returns an array of notifications
+      #
+      # Example :
+      #   message.notify(user, user.father) # [::ActsAsNotifiable::Notification]
+      # Or :
+      #   message.notify(user, [user.sister, user.brother, user.grandma]) # []
+      #
+      def notify(notifier, notifieds)
+        notifieds = [*notifieds]
+
+        notifieds.each do |n|
+          self.related_notifications.build(
+            notifier: notifier,
+            notifiable: self,
+            body: "Awesome notification body !",
+            notifieds: notifieds
+          )
+        end
+
+        self.notifications
+      end
+
+      ##
+      # Notify one or several @notifieds about self, coming from @notifier.
+      # Returns whether self was saved or not
+      #
+      # Example :
+      #   message.notify!(user, user.mother) # true
+      # Or :
+      #  message.notify!(user, [user.sister, user.aunt, user.counselor]) # true
+      def notify!(notifier, notifieds)
+        self.notify(notifier, notifieds)
+        self.save
+      end
     end
   end
 end
