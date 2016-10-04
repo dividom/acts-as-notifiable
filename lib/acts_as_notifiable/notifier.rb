@@ -30,46 +30,46 @@ module ActsAsNotifiable
 
         include ActsAsNotifiable::Notifier::InstanceMethods
       end
+    end
 
-      module InstanceMethods
+    module InstanceMethods
 
-        ##
-        # Notify a one or several @notifieds about a @notifiable, coming from self.
-        # Doesn't save the notifications.
-        # Returns an array of notifications
-        #
-        # Example :
-        #   user.notify(message, user.father) # [::ActsAsNotifiable::Notification]
-        # Or :
-        #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
-        #
-        def notify(notifiable, notifieds)
-          notifieds = [*notifieds]
+      ##
+      # Notify a one or several @notifieds about a @notifiable, coming from self.
+      # Doesn't save the notifications.
+      # Returns an array of notifications
+      #
+      # Example :
+      #   user.notify(message, user.father) # [::ActsAsNotifiable::Notification]
+      # Or :
+      #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
+      #
+      def notify(notifiable, notifieds)
+        notifieds = [*notifieds]
 
-          notifieds.each do |n|
-            self.sent_notifications.build(
-              notifier: self,
-              notifiable: notifiable,
-              body: "Awesome notification body !",
-              notifieds: notifieds
-            )
-          end
-
-          self.notifications
+        notifieds.each do |n|
+          self.sent_notifications.build(
+            notifier: self,
+            notifiable: notifiable,
+            body: "Awesome notification body !",
+            notifieds: notifieds
+          )
         end
 
-        ##
-        # Notify one or several @notifieds about a @notifiable, coming from self.
-        # Returns whether self was saved or not
-        #
-        # Example :
-        #   user.notify!(message, user.mother) # true
-        # Or :
-        #  user.notify!(message, [user.sister, user.aunt, user.counselor]) # true
-        def notify!(notifiable, notifieds)
-          self.notify(notifiable, notifieds)
-          self.save
-        end
+        self.notifications
+      end
+
+      ##
+      # Notify one or several @notifieds about a @notifiable, coming from self.
+      # Returns whether self was saved or not
+      #
+      # Example :
+      #   user.notify!(message, user.mother) # true
+      # Or :
+      #  user.notify!(message, [user.sister, user.aunt, user.counselor]) # true
+      def notify!(notifiable, notifieds)
+        self.notify(notifiable, notifieds)
+        self.save
       end
     end
   end
