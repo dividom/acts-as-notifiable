@@ -19,10 +19,9 @@ module ActsAsNotifiable
   autoload :Notifier
   autoload :VERSION
 
-end
-
-ActiveSupport.on_load(:active_record) do
-  extend ActsAsNotifiable::Notifiable
-  include ActsAsNotifiable::Notified
-  include ActsAsNotifiable::Notifier
+  if defined?(ActiveRecord::Base)
+    ActiveRecord::Base.extend ActsAsNotifiable::Notifiable
+    ActiveRecord::Base.include ActsAsNotifiable::Notified
+    ActiveRecord::Base.include ActsAsNotifiable::Notifier
+  end
 end
