@@ -3,6 +3,11 @@ class ActsAsTaggableMigration < ActiveRecord::Migration
     create_table :notifications do |t|
       t.string :body
       t.timestamps
+
+      # Make sure that columns length are long enough to contain
+      # the required class names
+      t.references :notifier, polymorphic: true
+      t.references :notifiable, polymorphic: true
     end
 
     create_table :notifyings do |t|
@@ -10,16 +15,14 @@ class ActsAsTaggableMigration < ActiveRecord::Migration
 
       # Make sure that columns length are long enough to contain
       # the required class names
-      t.references :notifiable, polymorphic: true
       t.references :notified, polymorphic: true
-      t.references :notifier, polymorphic: true
 
       t.boolean :is_read, default: true
       t.datetime :read_at, default: nil
     end
 
     add_index :notifyings,
-              [:notification_id, :notifiable_id, :notifiable_type, :notifier_id, :notifier_type, :notified_id, :notified_type],
+              [:notification_id, :notified_id, :notified_type],
               unique: true, name: 'notifyings_idx'
   end
 

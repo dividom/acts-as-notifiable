@@ -7,15 +7,16 @@ module ActsAsNotifiable
               class_name: "::ActsAsNotifiable::Notifying",
               counter_cache: true
 
-    has_many :receivers, -> { distinct },
+    has_many :notifieds, -> { distinct },
               through: :notifying,
               source: :notified,
               class: "::ActsAsNotifiable::Notified"
 
-    has_many :notifiables, -> { distinct },
-              through: :notifying,
-              source: :notifiable,
-              class_name: '::ActsAsNotifiable::Notifiable'
+    belongs_to :notifiable,
+                polymorphic: true
+
+    belongs_to :notifier,
+                polymorphic: true
 
     validates_presence_of :body
     validates_length_of :body, maximum: 255

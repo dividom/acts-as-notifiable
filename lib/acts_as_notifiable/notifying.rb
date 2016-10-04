@@ -3,12 +3,10 @@ module ActsAsNotifiable
 
     belongs_to :notification, class_name: "::ActsAsNotifiable::Notification"
     belongs_to :notified, polymorphic: true
-    belongs_to :notifiable, polymorphic: true
 
-    scope :global, -> { where(is_global: true) }
     scope :unread, -> { where(is_read: true) }
 
     validates_presence_of :notification_id
-    validates_uniqueness_of :notification_id, scope: [:notifiable_type, :notifiable_id, :notified_id, :notified_type]
+    validates_uniqueness_of :notification_id, scope: [:notified_id, :notified_type]
   end
 end
