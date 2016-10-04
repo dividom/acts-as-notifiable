@@ -4,7 +4,8 @@ module ActsAsNotifiable
 
     has_many :notifyings,
               dependent: :destroy,
-              class_name: "::ActsAsNotifiable::Notifying"
+              class_name: "::ActsAsNotifiable::Notifying",
+              counter_cache: true
 
     has_many :receivers, -> { distinct },
               through: :notifying,
@@ -52,5 +53,5 @@ module ActsAsNotifiable
     body
   end
 
-  
+
 end
