@@ -33,6 +33,15 @@ module ActsAsNotifiable
         end
 
         include ActsAsNotifiable::Notified::InstanceMethods
+        extend ActsAsNotifiable::Notified::SingletonMethods
+      end
+
+      def notified?
+        false
+      end
+
+      def is_notified?
+        notified?
       end
     end
 
@@ -71,6 +80,24 @@ module ActsAsNotifiable
       def notify!(notifiable, notifier)
         self.notify(notifiable, notifier)
         self.save
+      end
+
+      def notified?
+        self.class.is_notified?
+      end
+
+      def is_notified?
+        notified?
+      end
+    end
+
+    module SingletonMethods
+      def notified?
+        true
+      end
+
+      def is_notified?
+        notified?
       end
     end
   end

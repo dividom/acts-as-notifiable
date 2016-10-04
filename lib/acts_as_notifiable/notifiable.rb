@@ -1,6 +1,10 @@
 module ActsAsNotifiable
   module Notifiable
 
+    def notifiable?
+      false
+    end
+
     ##
     # Make a model notifiable. This allows an instance of a model to claim notifications
     # are related to it.
@@ -19,6 +23,10 @@ module ActsAsNotifiable
                     dependent: :destroy
                     class_name: '::ActsAsNotifiable::Notification'
                   )
+
+        def self.notifiable?
+          true
+        end
       end
 
       include ActsAsNotifiable::Notifiable::InstanceMethods
