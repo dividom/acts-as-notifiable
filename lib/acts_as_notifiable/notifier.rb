@@ -36,33 +36,39 @@ module ActsAsNotifiable
         ##
         # Notify a @notified about a @notifiable.
         # Doesn't save the notifications.
+        # Returns an array of notifications
         #
         # Example :
-        #   @user.notify(message, @user.sister)
+        #   @user.notify(message, @user.father) # [::ActsAsNotifiable::Notification]
         # Or :
-        #   @user.notify(message, [@user.sister, @user.brother, @user.grandma])
+        #   @user.notify(message, [@user.sister, @user.brother, @user.grandma]) # []
         #
         def notify(notifiable, notifieds)
           notifieds = [*notifieds]
-          notifications = []
 
           notifieds.each do |n|
-            self.sent_notifyings.build(
+            self.sent_notifications.build(
               notifier: self,
               notifiable: notifiable,
-              notified: n
+              body: "Awesome notification body !",
+              notifieds: notifieds
             )
           end
+
+          self.notifications
         end
 
         ##
         # Notify a @notified about a @notifiable.
+        # Returns whether self was saved or not
         #
-        #
-        #
-        #
+        # Example :
+        #   @user.notify!(message, @user.mother) # true
+        # Or :
+        #  @user.notify!(message, [@user.sister, @user.aunt, @user.counselor]) # true
         def notify!(notifiable, notifieds)
-          # TODO
+          self.notify(notifiable, notifieds)
+          self.save
         end
       end
     end
