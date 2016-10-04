@@ -15,6 +15,7 @@ module ActsAsNotifiable
       #   class User
       #     acts_as_notifier
       #   end
+      #
       def acts_as_notifier(opts={})
         class_eval do
           sent_notifyings_scope = opts.delete(:scope)
@@ -38,8 +39,35 @@ module ActsAsNotifiable
       module InstanceMethods
 
         ##
-        # TODO
-        def notify()
+        # Notify a @notified about a @notifiable.
+        # Doesn't save the notifications.
+        #
+        # Example :
+        #   @user.notify(message, @user.sister)
+        # Or :
+        #   @user.notify(message, [@user.sister, @user.brother, @user.grandma])
+        #
+        def notify(notifiable, notifieds)
+          notifieds = [*notifieds]
+          notifications = []
+
+          notifieds.each do |n|
+            self.sent_notifyings.build(
+              notifier: self,
+              notifiable: notifiable,
+              notified: n
+            )
+          end
+        end
+
+        ##
+        # Notify a @notified about a @notifiable.
+        #
+        #
+        #
+        #
+        def notify!(notifiable, notifieds)
+          # TODO
         end
       end
     end
