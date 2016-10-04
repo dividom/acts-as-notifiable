@@ -10,7 +10,7 @@ module ActsAsNotifiable
     has_many :notifieds, -> { distinct },
               through: :notifying,
               source: :notified,
-              class: "::ActsAsNotifiable::Notified"
+              class_name: "::ActsAsNotifiable::Notified"
 
     belongs_to :notifiable,
                 polymorphic: true

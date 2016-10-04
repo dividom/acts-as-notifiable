@@ -1,0 +1,63 @@
+  [1m[36m (41.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ActsAsNotifiableMigration (1)
+  [1m[36mActiveRecord::SchemaMigration Load (6.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ActsAsNotifiableMigration (1)
+  [1m[35m (6.6ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /Users/dividom/Documents/Dividom/Projects/acts_as_notifiable/db/migrate/1_acts_as_notifiable_migration.rb:5)
+  [1m[36m (22.5ms)[0m  [1mCREATE TABLE "notifications" ("id" serial primary key, "body" character varying, "created_at" timestamp, "updated_at" timestamp, "notifier_id" integer, "notifier_type" character varying, "notifiable_id" integer, "notifiable_type" character varying) [0m
+  [1m[35m (20.3ms)[0m  CREATE TABLE "notifyings" ("id" serial primary key, "notification_id" integer, "notified_id" integer, "notified_type" character varying, "is_read" boolean DEFAULT 't', "read_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "notifyings_idx" ON "notifyings"  ("notification_id", "notified_id", "notified_type")[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "1"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddNotifyingsCounterCacheToNotifications (2)
+  [1m[35m (12.6ms)[0m  BEGIN
+  [1m[36m (19.4ms)[0m  [1mALTER TABLE "notifications" ADD "notifyings_count" integer DEFAULT 0[0m
+  [1m[35m (11.9ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (12.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNotifyingsCounterCacheToNotifications (2)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (23.4ms)[0m  [1mALTER TABLE "notifications" ADD "notifyings_count" integer DEFAULT 0[0m
+  [1m[35mActsAsNotifiable::Notification Load (0.4ms)[0m  SELECT  "notifications".* FROM "notifications"  ORDER BY "notifications"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "2"]]
+  [1m[35m (17.2ms)[0m  COMMIT
+Migrating to AddIndexToNotifyings (3)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_notifications_on_notifier_type" ON "notifications"  ("notifier_type")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_notifications_on_notifier_id" ON "notifications"  ("notifier_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_notifications_on_notifier_type_and_notifier_id" ON "notifications"  ("notifier_type", "notifier_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_notifications_on_notifiable_type" ON "notifications"  ("notifiable_type")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_notifications_on_notifiable_id" ON "notifications"  ("notifiable_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_notifications_on_notifiable_type_and_notifiable_id" ON "notifications"  ("notifiable_type", "notifiable_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_notifyings_on_notification_id" ON "notifyings"  ("notification_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_notifyings_on_notified_type" ON "notifyings"  ("notified_type")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_notifyings_on_notified_id" ON "notifyings"  ("notified_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_notifyings_on_notified_type_and_notified_id" ON "notifyings"  ("notified_type", "notified_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "3"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'notifications'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'notifyings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+

@@ -23,7 +23,7 @@ module ActsAsNotifiable
           has_many :sent_notifications, sent_notifications_scope,
                     opts.merge(
                       as: :notifier,
-                      dependent: :destroy
+                      dependent: :destroy,
                       class_name: '::ActsAsNotifiable::Notification'
                     )
         end

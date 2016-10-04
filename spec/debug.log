@@ -1,0 +1,2 @@
+# Logfile created on 2016-10-04 15:47:22 +0200 by logger.rb/53141
+D, [2016-10-04T15:48:19.102824 #98151] DEBUG -- :   [1m[36m (646.4ms)[0m  [1mCREATE DATABASE "acts_as_notifiable" ENCODING = 'utf8'[0m

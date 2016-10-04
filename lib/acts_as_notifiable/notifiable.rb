@@ -19,8 +19,8 @@ module ActsAsNotifiable
 
         has_many :related_notifications, related_notifications_scope
                   opts.merge(
-                    as: :notifiable
-                    dependent: :destroy
+                    as: :notifiable,
+                    dependent: :destroy,
                     class_name: '::ActsAsNotifiable::Notification'
                   )
 

@@ -1,4 +1,4 @@
-class ActsAsTaggableMigration < ActiveRecord::Migration
+class ActsAsNotifiableMigration < ActiveRecord::Migration
   def self.up
     create_table :notifications do |t|
       t.string :body

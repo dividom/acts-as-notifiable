@@ -59,13 +59,12 @@ module ActsAsNotifiable
       #
       def notify(notifiable, notifier)
 
-          self.notifications.build(
-            notifier: notifier,
-            notifiable: notifiable,
-            body: "Awesome notification body !",
-            notifieds: [self]
-          )
-        end
+        self.notifications.build(
+          notifier: notifier,
+          notifiable: notifiable,
+          body: "Awesome notification body !",
+          notifieds: [self]
+        )
 
         self.notifications
       end
