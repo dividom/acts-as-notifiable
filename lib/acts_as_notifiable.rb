@@ -18,6 +18,7 @@ module ActsAsNotifiable
   autoload :Notified
   autoload :Notifier
   autoload :VERSION
+
 end
 
 ActiveSupport.on_load(:active_record) do
