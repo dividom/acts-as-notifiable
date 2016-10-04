@@ -18,19 +18,14 @@ module ActsAsNotifiable
       #
       def acts_as_notifier(opts={})
         class_eval do
-          sent_notifyings_scope = opts.delete(:scope)
+          sent_notifications_scope = opts.delete(:scope)
 
-          has_many :sent_notifyings, sent_notifyings_scope,
+          has_many :sent_notifications, sent_notifications_scope,
                     opts.merge(
                       as: :notifier,
-                      dependant: :destroy,
-                      class_name: '::ActsAsNotifiable::Notifying'
+                      dependent: :destroy
+                      class_name: '::ActsAsNotifiable::Notification'
                     )
-
-          has_many :sent_notifications,
-                    through: :notifyings,
-                    source: :notification,
-                    class_name: '::ActsAsNotifiable::Notification'
         end
 
         include ActsAsNotifiable::Notifier::InstanceMethods

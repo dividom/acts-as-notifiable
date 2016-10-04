@@ -26,8 +26,8 @@ module ActsAsNotifiable
                       class_name: '::ActsAsNotifiable::Notifying'
                     )
 
-          has_many :received_notifications,
-                    through: :notifyings,
+          has_many :notifications,
+                    through: :received_notifyings,
                     source: :notification,
                     class_name: '::ActsAsNotifiable::Notification'
         end

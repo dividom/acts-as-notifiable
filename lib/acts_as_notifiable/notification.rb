@@ -7,15 +7,16 @@ module ActsAsNotifiable
               class_name: "::ActsAsNotifiable::Notifying",
               counter_cache: true
 
-    has_many :receivers, -> { distinct },
+    has_many :notifieds, -> { distinct },
               through: :notifying,
               source: :notified,
               class: "::ActsAsNotifiable::Notified"
 
-    has_many :notifiables, -> { distinct },
-              through: :notifying,
-              source: :notifiable,
-              class_name: '::ActsAsNotifiable::Notifiable'
+    belongs_to :notifiable,
+                polymorphic: true
+
+    belongs_to :notifier,
+                polymorphic: true
 
     validates_presence_of :body
     validates_length_of :body, maximum: 255
@@ -23,7 +24,6 @@ module ActsAsNotifiable
     ### SCOPES:
 
     def self.from(notifier)
-      joins(:notifyings).
       where(["notifyings.notifier_type = ? AND notifyings.notifier_id = ?", notifier.class.name, notifier.id]).
       select("notifications.*")
     end
@@ -35,13 +35,11 @@ module ActsAsNotifiable
     end
 
     def self.for(notifiable)
-      joins(:notifyings).
       where(["notifyings.notifiable_type = ? AND notifyings.notifiable_id = ?", notifiable.class.name, notifiable.id]).
       select("notifications.*")
     end
 
     def self.for_class(notifiable_class)
-      joins(:notifyings).
       where(["notifyings.notifiable_type = ?", notifiable_class]).
       select("notifications.*")
     end
