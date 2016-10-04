@@ -8,5 +8,12 @@ module ActsAsNotifiable
 
     validates_presence_of :notification_id
     validates_uniqueness_of :notification_id, scope: [:notified_id, :notified_type]
+
+    validate :ensure_notified
+
+    def ensure_notified
+      errors.add(:notified, "is not a ::ActsAsNotifiable::Notified object") unless
+        self.notified.respond_to?(:is_notified?) && self.notified.is_notified?
+    end
   end
 end

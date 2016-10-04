@@ -21,6 +21,9 @@ module ActsAsNotifiable
     validates_presence_of :body
     validates_length_of :body, maximum: 255
 
+    validate :ensure_notifier
+    validate :ensure_notifiable
+
     ### SCOPES:
 
     def self.from(notifier)
@@ -51,5 +54,14 @@ module ActsAsNotifiable
     body
   end
 
+  def ensure_notifier
+    errors.add(:notifier, "is not a ::ActsAsNotifiable::Notifier object") unless
+      self.notifier.respond_to?(:is_notifier?) && self.notifier.is_notifier?
+  end
+
+  def ensure_notifiable
+    errors.add(:notifiable, "is not a ::ActsAsNotifiable::Notifiable object") unless
+      self.notifiable.respond_to?(:is_notifiable?) && self.notifiable.is_notifiable?
+  end
 
 end
