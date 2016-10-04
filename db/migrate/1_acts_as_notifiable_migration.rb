@@ -14,10 +14,8 @@ class ActsAsTaggableMigration < ActiveRecord::Migration
       t.references :notified, polymorphic: true
       t.references :notifier, polymorphic: true
 
-      t.boolean :is_read
-      t.datetime :read_at
-
-      t.boolean :is_global
+      t.boolean :is_read, default: true
+      t.datetime :read_at, default: nil
     end
 
     add_index :notifyings,
