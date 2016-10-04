@@ -6,9 +6,22 @@ describe 'Acts as notifiable' do
     expect(UnnotifiableModel).to_not be_notifiable
   end
 
-  describe 'Taggable model' do
+  it "should respond to method 'acts_as_notifiable'" do
+    expect(UnnotifiableModel).to respond_to(:acts_as_notifiable)
+  end
+
+  describe 'Notifiable method generation' do
+    before(:each) do
+      @notifiable = NotifiableModel.new
+    end
+
     it 'should respond true to notifiable?' do
       expect(NotifiableModel).to be_notifiable
+    end
+
+    it "should respond to method 'notify' and 'notify!'" do
+      expect(@notifiable).to respond_to(:notify)
+      expect(@notifiable).to respond_to(:notify!)
     end
   end
 end

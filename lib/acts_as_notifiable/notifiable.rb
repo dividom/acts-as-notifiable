@@ -17,7 +17,7 @@ module ActsAsNotifiable
       class_eval do
         related_notifications_scope = opts.delete(:scope)
 
-        has_many :related_notifications, related_notifications_scope
+        has_many :related_notifications, related_notifications_scope,
                   opts.merge(
                     as: :notifiable,
                     dependent: :destroy,
