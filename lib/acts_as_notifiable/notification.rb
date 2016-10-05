@@ -8,7 +8,7 @@ module ActsAsNotifiable
               counter_cache: true
 
     has_many :notifieds, -> { distinct },
-              through: :notifying,
+              through: :notifyings,
               source: :notified,
               class_name: "::ActsAsNotifiable::Notified"
 
