@@ -5,8 +5,7 @@ module ActsAsNotifiable
     has_many :notifyings,
               dependent: :destroy,
               class_name: "::ActsAsNotifiable::Notifying",
-              inverse_of: :notification,
-              counter_cache: true
+              inverse_of: :notification
     accepts_nested_attributes_for :notifyings
 
     belongs_to :notifiable,
