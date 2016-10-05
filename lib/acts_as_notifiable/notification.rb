@@ -7,6 +7,7 @@ module ActsAsNotifiable
               class_name: "::ActsAsNotifiable::Notifying",
               inverse_of: :notification,
               counter_cache: true
+    accepts_nested_attributes_for :notifyings
 
     belongs_to :notifiable,
                 polymorphic: true

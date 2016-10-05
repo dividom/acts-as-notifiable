@@ -6,7 +6,7 @@ module ActsAsNotifiable
 
     scope :unread, -> { where(is_read: true) }
 
-    validates_presence_of :notification_id
+    validates_presence_of :notification
     validates_uniqueness_of :notification_id, scope: [:notified_id, :notified_type]
 
     validate :ensure_notified
