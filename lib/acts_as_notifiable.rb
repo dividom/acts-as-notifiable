@@ -20,7 +20,7 @@ module ActsAsNotifiable
   autoload :VERSION
 
   if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.extend ActsAsNotifiable::Notifiable
+    ActiveRecord::Base.include ActsAsNotifiable::Notifiable
     ActiveRecord::Base.include ActsAsNotifiable::Notified
     ActiveRecord::Base.include ActsAsNotifiable::Notifier
   end
