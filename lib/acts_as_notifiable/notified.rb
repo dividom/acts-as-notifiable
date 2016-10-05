@@ -57,7 +57,7 @@ module ActsAsNotifiable
       # Or :
       #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
       #
-      def notify(notifiable, notifier)
+      def notify_to(notifiable, notifier)
 
         self.notifications.build(
           notifier: notifier,
@@ -76,7 +76,7 @@ module ActsAsNotifiable
       # Example :
       #   user.mother.notify!(message, user) # true
       #
-      def notify!(notifiable, notifier)
+      def notify_to!(notifiable, notifier)
         self.notify(notifiable, notifier)
         self.save
       end

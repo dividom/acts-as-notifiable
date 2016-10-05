@@ -53,7 +53,7 @@ module ActsAsNotifiable
       # Or :
       #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
       #
-      def notify(notifiable, notifieds)
+      def notify_from(notifiable, notifieds)
         notifieds = [*notifieds]
 
         notifieds.each do |n|
@@ -76,7 +76,7 @@ module ActsAsNotifiable
       #   user.notify!(message, user.mother) # true
       # Or :
       #  user.notify!(message, [user.sister, user.aunt, user.counselor]) # true
-      def notify!(notifiable, notifieds)
+      def notify_from!(notifiable, notifieds)
         self.notify(notifiable, notifieds)
         self.save
       end

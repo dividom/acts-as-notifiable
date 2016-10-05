@@ -20,9 +20,9 @@ describe 'Acts as notified' do
       expect(NotifiedModel).to be_notified
     end
 
-    it "should respond to method 'notify' and 'notify!'" do
-      expect(@notified).to respond_to(:notify)
-      expect(@notified).to respond_to(:notify!)
+    it "should respond to method 'notify_to' and 'notify_to!'" do
+      expect(@notified).to respond_to(:notify_to)
+      expect(@notified).to respond_to(:notify_to!)
     end
   end
 end

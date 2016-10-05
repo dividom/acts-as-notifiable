@@ -20,9 +20,9 @@ describe 'Acts as notifiable' do
       expect(NotifiableModel).to be_notifiable
     end
 
-    it "should respond to method 'notify' and 'notify!'" do
-      expect(@notifiable).to respond_to(:notify)
-      expect(@notifiable).to respond_to(:notify!)
+    it "should respond to method 'notify_about' and 'notify_about!'" do
+      expect(@notifiable).to respond_to(:notify_about)
+      expect(@notifiable).to respond_to(:notify_about!)
     end
   end
 
