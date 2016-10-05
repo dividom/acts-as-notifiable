@@ -57,15 +57,16 @@ module ActsAsNotifiable
       #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
       #
       def notify_to(notifiable, notifier)
+        notifying = ActsAsNotifiable::Notifying.new(
+                      notified: self
+                    )
 
         self.notifications.build(
           notifier: notifier,
           notifiable: notifiable,
           body: "Awesome notification body !",
-          notifieds: [self]
+          notifyings: [notifying]
         )
-
-        self.notifications
       end
 
       ##

@@ -55,17 +55,20 @@ module ActsAsNotifiable
       #
       def notify_from(notifiable, notifieds)
         notifieds = [*notifieds]
+        notifyings = []
 
         notifieds.each do |n|
-          self.sent_notifications.build(
-            notifier: self,
-            notifiable: notifiable,
-            body: "Awesome notification body !",
-            notifieds: notifieds
-          )
+          notifyings << ActsAsNotifiable::Notifying.new(
+                          notified: n
+                        )
         end
 
-        self.notifications
+        return self.sent_notifications.build(
+                  notifier: self,
+                  notifiable: notifiable,
+                  body: "Awesome notification body !",
+                  notifieds: notifieds
+                )
       end
 
       ##

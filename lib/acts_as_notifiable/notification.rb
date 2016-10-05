@@ -6,7 +6,7 @@ module ActsAsNotifiable
               dependent: :destroy,
               class_name: "::ActsAsNotifiable::Notifying",
               counter_cache: true
-              
+
     belongs_to :notifiable,
                 polymorphic: true
 
