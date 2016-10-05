@@ -1,35 +1,43 @@
 module ActsAsNotifiable
   module Notifiable
 
-    def notifiable?
-      false
+    def self.included(base)
+      base.extend ClassMethods
     end
 
-    ##
-    # Make a model notifiable. This allows an instance of a model to claim notifications
-    # are related to it.
-    #
-    # Example :
-    #   class Message
-    #     acts_as_notifiable
-    #   end
-    def acts_as_notifiable(opts={})
-      class_eval do
-        related_notifications_scope = opts.delete(:scope)
+    module ClassMethods
 
-        has_many :related_notifications, related_notifications_scope,
-                  opts.merge(
-                    as: :notifiable,
-                    dependent: :destroy,
-                    class_name: '::ActsAsNotifiable::Notification'
-                  )
+      ##
+      # Make a model notifiable. This allows an instance of a model to claim notifications
+      # are related to it.
+      #
+      # Example :
+      #   class Message
+      #     acts_as_notifiable
+      #   end
+      def acts_as_notifiable(opts={})
+        class_eval do
+          related_notifications_scope = opts.delete(:scope)
 
-        def self.notifiable?
-          true
+          has_many :related_notifications, related_notifications_scope,
+                    opts.merge(
+                      as: :notifiable,
+                      dependent: :destroy,
+                      class_name: '::ActsAsNotifiable::Notification'
+                    )
         end
+
+        include ActsAsNotifiable::Notifiable::InstanceMethods
+        extend ActsAsNotifiable::Notifiable::SingletonMethods
       end
 
-      include ActsAsNotifiable::Notifiable::InstanceMethods
+      def notifiable?
+        false
+      end
+
+      def is_notifiable?
+        notified?
+      end
     end
 
     module InstanceMethods
@@ -73,6 +81,24 @@ module ActsAsNotifiable
       def notify_about!(notifier, notifieds)
         self.notify_about(notifier, notifieds)
         self.save
+      end
+
+      def notifiable?
+        self.class.is_notifiable?
+      end
+
+      def is_notifiable?
+        notifiable?
+      end
+    end
+
+    def SingletonMethods
+      def notified?
+        true
+      end
+
+      def is_notified?
+        notified?
       end
     end
   end
