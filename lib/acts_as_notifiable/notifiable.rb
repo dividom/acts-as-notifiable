@@ -92,7 +92,8 @@ module ActsAsNotifiable
       end
     end
 
-    def SingletonMethods
+    module SingletonMethods
+      
       def notified?
         true
       end
