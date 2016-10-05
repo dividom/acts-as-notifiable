@@ -17,7 +17,7 @@ class ActsAsNotifiableMigration < ActiveRecord::Migration
       # the required class names
       t.references :notified, polymorphic: true
 
-      t.boolean :is_read, default: true
+      t.boolean :is_read, default: false
       t.datetime :read_at, default: nil
     end
 

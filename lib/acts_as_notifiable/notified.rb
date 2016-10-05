@@ -22,7 +22,7 @@ module ActsAsNotifiable
           has_many :received_notifyings, received_notifyings_scope,
                     opts.merge(
                       as: :notified,
-                      dependant: :destroy,
+                      dependent: :destroy,
                       class_name: '::ActsAsNotifiable::Notifying'
                     )
 

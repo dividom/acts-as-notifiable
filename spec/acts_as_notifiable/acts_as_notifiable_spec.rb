@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 require 'spec_helper'
+require 'rails_helper'
 
 describe 'Acts as notifiable' do
   it "should provide a class method 'notifiable?' that is false for un-notifiable models" do
@@ -23,5 +24,9 @@ describe 'Acts as notifiable' do
       expect(@notifiable).to respond_to(:notify)
       expect(@notifiable).to respond_to(:notify!)
     end
+  end
+
+  describe NotifiableModel, type: :model do
+    it { is_expected.to have_many(:related_notifications) }
   end
 end

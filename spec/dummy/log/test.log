@@ -255,3 +255,376 @@
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (13.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (11.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (13.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (13.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (26.3ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.5ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (13.7ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (6.2ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.2ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (1.2ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (25.1ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.5ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.2ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.4ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (3.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.5ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.1ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.3ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.4ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.1ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.3ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.4ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.1ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.4ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.4ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.1ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.4ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (12.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (24.6ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.5ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.2ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.4ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (1.7ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.7ms)[0m  SELECT  "notifyings".* FROM "notifyings"  ORDER BY "notifyings"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "notifyings" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "notifyings" SET "notification_id" = $1 WHERE "notifyings"."id" = $2[0m  [["notification_id", 0], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mActsAsNotifiable::Notifying Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Load (0.2ms)[0m  SELECT "notifyings".* FROM "notifyings"
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" = 0 AND "notifyings"."notified_type" IS NULL) LIMIT 1[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.9ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" = 0 AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'dummy value') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mActsAsNotifiable::Notifying Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'NotifiedModel') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mActsAsNotifiable::Notifying Exists (0.3ms)[0m  SELECT  1 AS one FROM "notifyings" WHERE ("notifyings"."notification_id" IS NULL AND "notifyings"."notified_id" IS NULL AND "notifyings"."notified_type" = 'UnnotifiableModel') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

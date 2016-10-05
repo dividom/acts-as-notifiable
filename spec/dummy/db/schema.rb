@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004155803) do
+ActiveRecord::Schema.define(version: 20161005084538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(version: 20161004155803) do
   add_index "notifications", ["notifier_id"], name: "index_notifications_on_notifier_id", using: :btree
   add_index "notifications", ["notifier_type", "notifier_id"], name: "index_notifications_on_notifier_type_and_notifier_id", using: :btree
   add_index "notifications", ["notifier_type"], name: "index_notifications_on_notifier_type", using: :btree
+
+  create_table "notified_models", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "notifyings", force: :cascade do |t|
     t.integer  "notification_id"
