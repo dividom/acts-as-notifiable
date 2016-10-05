@@ -77,7 +77,7 @@ module ActsAsNotifiable
       #   user.mother.notify!(message, user) # true
       #
       def notify_to!(notifiable, notifier)
-        self.notify(notifiable, notifier)
+        self.notify_to(notifiable, notifier)
         self.save
       end
 

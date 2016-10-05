@@ -71,7 +71,7 @@ module ActsAsNotifiable
       # Or :
       #  message.notify!(user, [user.sister, user.aunt, user.counselor]) # true
       def notify_about!(notifier, notifieds)
-        self.notify(notifier, notifieds)
+        self.notify_about(notifier, notifieds)
         self.save
       end
     end
