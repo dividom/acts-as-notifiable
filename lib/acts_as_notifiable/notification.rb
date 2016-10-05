@@ -7,10 +7,6 @@ module ActsAsNotifiable
               class_name: "::ActsAsNotifiable::Notifying",
               counter_cache: true
 
-    has_many :notifieds, -> { distinct },
-              through: :notifyings,
-              class_name: "::ActsAsNotifiable::Notified"
-
     belongs_to :notifiable,
                 polymorphic: true
 
