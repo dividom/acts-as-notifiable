@@ -9,7 +9,6 @@ module ActsAsNotifiable
 
     has_many :notifieds, -> { distinct },
               through: :notifyings,
-              source: :notified,
               class_name: "::ActsAsNotifiable::Notified"
 
     belongs_to :notifiable,
