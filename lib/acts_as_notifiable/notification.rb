@@ -21,8 +21,8 @@ module ActsAsNotifiable
     validates_presence_of :body
     validates_length_of :body, maximum: 255
 
-    validate :ensure_notifier
     validate :ensure_notifiable
+    validate :ensure_notifier
 
     ### SCOPES:
 
@@ -46,22 +46,21 @@ module ActsAsNotifiable
       where(["notifyings.notifiable_type = ?", notifiable_class]).
       select("notifications.*")
     end
+
+    ### INSTANCE METHODS:
+
+    def to_s
+      self.body
+    end
+
+    def ensure_notifier
+      errors.add(:notifier, "is not a ::ActsAsNotifiable::Notifier object") unless
+        self.notifier.respond_to?(:is_notifier?) && self.notifier.is_notifier?
+    end
+
+    def ensure_notifiable
+      errors.add(:notifiable, "is not a ::ActsAsNotifiable::Notifiable object") unless
+        self.notifiable.respond_to?(:is_notifiable?) && self.notifiable.is_notifiable?
+    end
   end
-
-  ### INSTANCE METHODS:
-
-  def to_s
-    body
-  end
-
-  def ensure_notifier
-    errors.add(:notifier, "is not a ::ActsAsNotifiable::Notifier object") unless
-      self.notifier.respond_to?(:is_notifier?) && self.notifier.is_notifier?
-  end
-
-  def ensure_notifiable
-    errors.add(:notifiable, "is not a ::ActsAsNotifiable::Notifiable object") unless
-      self.notifiable.respond_to?(:is_notifiable?) && self.notifiable.is_notifiable?
-  end
-
 end

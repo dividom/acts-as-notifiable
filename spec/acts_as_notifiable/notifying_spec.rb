@@ -3,12 +3,6 @@ require 'spec_helper'
 require 'rails_helper'
 
 describe ActsAsNotifiable::Notifying, type: :model do
-  before(:each) do
-    @valid_notified = NotifiedModel.new(name: 'Bryan')
-    @invalid_notified = UnnotifiableModel.new()
-    @notification = ActsAsNotifiable::Notification.new(body: 'Emma has sent a message.')
-    @notifying = ActsAsNotifiable::Notifying.new()
-  end
 
   describe 'should belong to notification and notified' do
     it { is_expected.to belong_to(:notification) }
@@ -16,9 +10,23 @@ describe ActsAsNotifiable::Notifying, type: :model do
   end
 
   describe 'should have validations' do
+
+    before(:each) do
+      @valid_notified = NotifiedModel.new(name: 'Bryan')
+      @invalid_notified = UnnotifiableModel.new()
+      @notification = ActsAsNotifiable::Notification.new(body: 'Emma has sent a message.')
+      @notifying = ActsAsNotifiable::Notifying.new()
+    end
+
+    ##
+    # Common validations
+    #
     it { is_expected.to validate_presence_of(:notification_id) }
     it { is_expected.to validate_uniqueness_of(:notification_id).scoped_to([:notified_id, :notified_type]) }
 
+    ##
+    # Custom validations
+    #
     it 'should validate presence of notification' do
       @notifying.notified = @valid_notified
 
