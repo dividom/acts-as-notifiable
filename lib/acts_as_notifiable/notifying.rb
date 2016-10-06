@@ -1,7 +1,7 @@
 module ActsAsNotifiable
   class Notifying < ActiveRecord::Base
 
-    belongs_to :notification, class_name: "::ActsAsNotifiable::Notification", inverse_of: :notifyings, counter_cache: :true
+    belongs_to :notification, class_name: "::ActsAsNotifiable::Notification", inverse_of: :notifyings, counter_cache: true
     belongs_to :notified, polymorphic: true
 
     scope :unread, -> { where(is_read: true) }
