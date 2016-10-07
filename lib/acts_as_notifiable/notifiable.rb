@@ -55,7 +55,7 @@ module ActsAsNotifiable
       def notify_about(notifier, notifieds, opts={})
         notifieds = [*notifieds]
         notifyings = []
-        opts[:body] ||= "Awesome notification body !"
+        opts[:body] ||= I18n.translate('acts_as_notifiable.notification.body')
 
         notifieds.each do |n|
           notifyings << ActsAsNotifiable::Notifying.new(

@@ -1,11 +1,4 @@
 fr:
   acts_as_notifiable:
-    notify_about:
-      on_create: "Nouveau %{name}."
-      on_update: "%{name} modifié."
-    notify_to:
-      on_create: "Nouveau %{name}."
-      on_update: "%{name} modifié."
-    notify_from:
-      on_create: "Nouveau %{name}."
-      on_update: "%{name} modifié."
+    notification:
+      default_body: "Le message de la notification."

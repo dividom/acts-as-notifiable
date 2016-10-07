@@ -60,7 +60,7 @@ module ActsAsNotifiable
         notifying = ActsAsNotifiable::Notifying.new(
                       notified: self
                     )
-        opts[:body] ||= "Awesome notification body !"
+        opts[:body] ||= I18n.translate('acts_as_notifiable.notification.body')
 
         self.notifications.build(
           notifier: notifier,
