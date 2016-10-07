@@ -56,15 +56,16 @@ module ActsAsNotifiable
       # Or :
       #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
       #
-      def notify_to(notifiable, notifier)
+      def notify_to(notifiable, notifier, opts={})
         notifying = ActsAsNotifiable::Notifying.new(
                       notified: self
                     )
+        opts[:body] ||= "Awesome notification body !"
 
         self.notifications.build(
           notifier: notifier,
           notifiable: notifiable,
-          body: "Awesome notification body !",
+          body: opts[:body],
           notifyings: [notifying]
         )
       end
@@ -76,8 +77,8 @@ module ActsAsNotifiable
       # Example :
       #   user.mother.notify!(message, user) # true
       #
-      def notify_to!(notifiable, notifier)
-        self.notify_to(notifiable, notifier)
+      def notify_to!(notifiable, notifier, opts={})
+        self.notify_to(notifiable, notifier, opts)
         self.save
       end
 

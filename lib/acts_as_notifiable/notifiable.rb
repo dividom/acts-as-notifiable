@@ -52,9 +52,10 @@ module ActsAsNotifiable
       # Or :
       #   message.notify(user, [user.sister, user.brother, user.grandma]) # []
       #
-      def notify_about(notifier, notifieds)
+      def notify_about(notifier, notifieds, opts={})
         notifieds = [*notifieds]
         notifyings = []
+        opts[:body] ||= "Awesome notification body !"
 
         notifieds.each do |n|
           notifyings << ActsAsNotifiable::Notifying.new(
@@ -65,7 +66,7 @@ module ActsAsNotifiable
         return self.related_notifications.build(
                       notifier: notifier,
                       notifiable: self,
-                      body: "Awesome notification body !",
+                      body: opts[:body],
                       notifyings: notifyings
                     )
       end
@@ -78,8 +79,8 @@ module ActsAsNotifiable
       #   message.notify!(user, user.mother) # true
       # Or :
       #  message.notify!(user, [user.sister, user.aunt, user.counselor]) # true
-      def notify_about!(notifier, notifieds)
-        self.notify_about(notifier, notifieds)
+      def notify_about!(notifier, notifieds, opts={})
+        self.notify_about(notifier, notifieds, opts)
         self.save
       end
 
@@ -93,7 +94,7 @@ module ActsAsNotifiable
     end
 
     module SingletonMethods
-      
+
       def notified?
         true
       end

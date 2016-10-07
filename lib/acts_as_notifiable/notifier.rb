@@ -53,9 +53,10 @@ module ActsAsNotifiable
       # Or :
       #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
       #
-      def notify_from(notifiable, notifieds)
+      def notify_from(notifiable, notifieds, opts={})
         notifieds = [*notifieds]
         notifyings = []
+        opts[:body] ||= "Awesome notification body !"
 
         notifieds.each do |n|
           notifyings << ActsAsNotifiable::Notifying.new(
@@ -66,7 +67,7 @@ module ActsAsNotifiable
         return self.sent_notifications.build(
                   notifier: self,
                   notifiable: notifiable,
-                  body: "Awesome notification body !",
+                  body: opts[:body],
                   notifieds: notifieds
                 )
       end
@@ -79,8 +80,8 @@ module ActsAsNotifiable
       #   user.notify!(message, user.mother) # true
       # Or :
       #  user.notify!(message, [user.sister, user.aunt, user.counselor]) # true
-      def notify_from!(notifiable, notifieds)
-        self.notify_from(notifiable, notifieds)
+      def notify_from!(notifiable, notifieds, opts)
+        self.notify_from(notifiable, notifieds, opts)
         self.save
       end
 
