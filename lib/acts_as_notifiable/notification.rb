@@ -9,7 +9,7 @@ module ActsAsNotifiable
     accepts_nested_attributes_for :notifyings
     attr_accessor :notifieds # Hack to be able to use notifieds as a form field
     def notifieds
-      self.notifying.map(&:notified)
+      self.notifyings.map(&:notified)
     end
 
     belongs_to :notifiable,
