@@ -4,7 +4,7 @@ module ActsAsNotifiable
     belongs_to :notification, class_name: "::ActsAsNotifiable::Notification", inverse_of: :notifyings, counter_cache: true
     belongs_to :notified, polymorphic: true
 
-    scope :unread, -> { where(is_read: true) }
+    scope :unread, -> { where(is_read: false) }
 
     validates_presence_of :notification
     validates_uniqueness_of :notification_id, scope: [:notified_id, :notified_type]

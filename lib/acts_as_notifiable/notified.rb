@@ -28,7 +28,11 @@ module ActsAsNotifiable
 
           has_many :notifications,
                     through: :received_notifyings,
-                    class_name: '::ActsAsNotifiable::Notification'
+                    class_name: '::ActsAsNotifiable::Notification' do
+                      def unread
+                        where('notifyings.is_read = ?', false)
+                      end
+                    end
         end
 
         include ActsAsNotifiable::Notified::InstanceMethods

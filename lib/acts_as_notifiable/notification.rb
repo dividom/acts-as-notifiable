@@ -20,6 +20,8 @@ module ActsAsNotifiable
     validate :ensure_notifiable
     validate :ensure_notifier
 
+    default_scope { order(created_at: :asc)}
+
     ### SCOPES:
 
     def self.from(notifier)
