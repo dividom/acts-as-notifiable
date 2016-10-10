@@ -7,6 +7,7 @@ module ActsAsNotifiable
               class_name: "::ActsAsNotifiable::Notifying",
               inverse_of: :notification
     accepts_nested_attributes_for :notifyings
+    attr_accessor :notifieds # Hack to be able to use notifieds as a form field
 
     belongs_to :notifiable,
                 polymorphic: true
