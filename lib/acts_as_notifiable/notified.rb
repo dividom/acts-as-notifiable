@@ -61,16 +61,12 @@ module ActsAsNotifiable
       #   user.notify(message, [user.sister, user.brother, user.grandma]) # []
       #
       def notify_to(notifiable, notifier, opts={})
-        notifying = ActsAsNotifiable::Notifying.new(
-                      notified: self
-                    )
         opts[:body] ||= I18n.translate('acts_as_notifiable.notification.body')
 
         self.notifications.build(
           notifier: notifier,
           notifiable: notifiable,
-          body: opts[:body],
-          notifyings: [notifying]
+          body: opts[:body]
         )
       end
 
